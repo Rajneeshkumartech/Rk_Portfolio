@@ -3,6 +3,7 @@ import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { JetBrains_Mono } from "next/font/google";
 import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         
         <TooltipProvider>
         <Header/>
+        <StairTransition/>
         <PageTransition>
            {children}
         </PageTransition>
