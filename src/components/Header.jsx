@@ -3,6 +3,7 @@ import Link from "next/link"
 import Nav from "./Nav"
 import { Button } from "./ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
+import Mobilenav from "./Mobilenav"
 
 
 const Header = () => {
@@ -25,7 +26,7 @@ const Header = () => {
 
          {/* Mobile Nav */}
             <div className="lg:hidden">
-                Mobile view
+                <Mobilenav/>
             </div>
          
     </div>
