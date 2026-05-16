@@ -14,13 +14,13 @@ const Header = () => {
         {/* logo */}
       <Link href="/">
       <h1 className="text-4xl font-semibold">
-        RK <span className="text-accent">.</span></h1></Link>
+        RK<span className="text-accent">.</span></h1></Link>
 
         {/* desktop nav & hire me button */}
          <div className=" hidden lg:flex items-center gap-8">
             <Nav />
             <Link href="/contact" >
-            <Button  >Hire me</Button>
+            <Button className='cursor-pointer' >Hire me</Button>
             </Link>
          </div>
 
