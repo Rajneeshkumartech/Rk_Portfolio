@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${jetBrainsMono.variable} h-full antialiased`}
+      className={`${jetBrainsMono.variable} px-4 h-full antialiased`}
     >
       <body className={jetBrainsMono.variable}>
         
