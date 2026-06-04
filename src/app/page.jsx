@@ -1,57 +1,75 @@
-import Photo from '@/components/Photo'
-import Social from '@/components/Social'
-import Stats from '@/components/Stats'
-import { Button } from '@/components/ui/button'
-import React from 'react'
-import { FiDownload } from 'react-icons/fi'
+"use client";
+
+import Photo from "@/components/Photo";
+import Social from "@/components/Social";
+import Stats from "@/components/Stats";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import React from "react";
+import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-   <>
-   <section className='h-full' > 
-    <div className=' container mx-auto h-full' >
-      <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24' >
-        {/* text */}
-        <div className='text-center xl:text-left order-2 xl:order-0' >
-          <span className='text-xl' >Web Developer</span>
-          <h1 className='h1 mb-6 '  >Hello i&apos;m
-<br />
-          <span className='text-accent'>Rajneesh Kumar</span>
-          </h1>
-          <p className='max-w-125  mb-9 text-white/80'>Breaking the web, fixing the web, and making it better. I&apos;m a MERN stack explorer turning imagination into interactive reality.
-</p>
+    // Fixed: Full screen flex height restriction taaki single viewport me set rahe
+    <section className="w-full xl:h-[calc(100vh-140px)] flex flex-col justify-between py-4 xl:py-0 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 flex-1 flex flex-col justify-center">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-6 xl:gap-0 w-full">
+          
+          {/* Text block */}
+          <div className="text-center xl:text-left order-2 xl:order-0 max-w-[540px]">
+            <span className="text-xs md:text-sm tracking-[0.2em] text-white/60 uppercase font-mono mb-1 block">
+              Web Developer
+            </span>
+            {/* Fixed: Font scaling dynamically locked to prevent screen pushing */}
+            <h1 className="text-3xl md:text-5xl xl:text-[46px] font-semibold leading-tight my-2 text-white">
+              Hello I'm <br />
+              <span className="text-accent text-outline-hover">Rajneesh Kumar</span>
+            </h1>
+            <p className="mb-6 text-xs md:text-sm text-white/60 max-w-[440px] mx-auto xl:mx-0 leading-relaxed tracking-wide">
+              Breaking the web, fixing the web, and making it better. I&apos;m a MERN stack explorer turning imagination into interactive reality.
+            </p>
 
-{/* buttons & socials */}
-<div className='flex flex-col xl:flex-row items-center gap-8'>
-  <Button 
-  variant='outline'
-  size='lg'
-  className='group-hover:flex items-center gap-2'
+            {/* Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-4 md:gap-6">
+              <Link
+  href="/resume/Rajneesh_Resume.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-block"
+>
+  <Button
+    variant="outline"
+    size="lg"
+    className="flex items-center gap-2 border border-accent text-accent bg-transparent hover:bg-accent hover:text-primary transition-all duration-300 rounded-full px-5 py-3.5 text-xs font-semibold uppercase tracking-wider"
   >
-   <span>
-      Download CV
-    </span>
-    <FiDownload className='text-xl'/>
+    <span>View CV</span>
+    <FiDownload className="text-base" />
   </Button>
+</Link>
 
-{/*  */}
-<div className='mb-8 xl:mb-0' >
-  <Social containerStyles="flex gap-6 " iconStyles="w-9 h-9 border border-accent rounded-full flex items-center justify-center text-accent text-base hover:text-primary hover:bg-accent hover:transition-all duration-500"/>
-  </div>
+              <div className="flex items-center justify-center">
+                <Social
+                  containerStyles="flex gap-4"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex items-center justify-center text-accent text-sm hover:text-primary hover:bg-accent transition-all duration-500 bg-transparent"
+                />
+              </div>
+            </div>
+          </div>
 
+          {/* Photo block */}
+          <div className="order-1 xl:order-0 flex items-center justify-center xl:pr-4">
+            <Photo />
+          </div>
 
-  </div>
-        </div>
-        {/* photo */}
-        <div className='order-1 xl:order-0' >
-          <Photo/>
         </div>
       </div>
-    </div>
-    <Stats/>
-   </section>
-   </>
-  )
-}
+      
+      {/* Stats Section pinned properly at the bottom */}
+      <div className="w-full mt-4 xl:mt-0 xl:pb-4">
+        <Stats />
+      </div>
+    </section>
+  );
+};
 
-export default Home
+export default Home;

@@ -7,9 +7,9 @@ import StairTransition from "@/components/StairTransition";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
-  weight: ["100", "200", "300", "400", "500", "600", "700","800", ],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
-})
+});
 
 export const metadata = {
   title: "RK Portfolio",
@@ -18,19 +18,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${jetBrainsMono.variable} px-4 h-full antialiased`}
-    >
-      <body className={jetBrainsMono.variable}>
-        
+    <html lang="en" className={`${jetBrainsMono.variable} min-h-screen w-full antialiased`}>
+      <body className="bg-[#1c1c22] text-white flex flex-col min-h-screen w-full m-0 lg:px-20 px-4 overflow-x-hidden">
         <TooltipProvider>
-        <Header/>
-        <StairTransition/>
-        <PageTransition>
-           {children}
-        </PageTransition>
-       </TooltipProvider></body>
+          <Header />
+          <StairTransition />
+          <PageTransition>
+            <main className="w-full flex-1">
+              {children}
+            </main>
+          </PageTransition>
+        </TooltipProvider>
+      </body>
     </html>
   );
 }
