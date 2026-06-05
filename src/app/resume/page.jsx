@@ -143,10 +143,10 @@ const Resume = () => {
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[130px] py-3 px-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-0.5 shadow-md"
+                        className="bg-[#232329] h-32 py-3 px-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-0.5 shadow-md"
                       >
                         <span className="text-accent text-xs font-medium">{item.duration}</span>
-                        <h3 className="text-base max-w-[260px] min-h-[38px] flex items-center text-center lg:text-left font-semibold leading-tight">
+                        <h3 className="text-base max-w-[260px] min-h-9 flex items-center text-center lg:text-left font-semibold leading-tight">
                           {item.position}
                         </h3>
                         <div className="flex items-center gap-2">
@@ -173,10 +173,10 @@ const Resume = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[130px] py-3 px-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-0.5 shadow-md"
+                        className="bg-[#232329] h-32 py-3 px-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-0.5 shadow-md"
                       >
                         <span className="text-accent text-xs font-medium">{item.duration}</span>
-                        <h3 className="text-base min-h-[38px] flex items-center text-center lg:text-left font-semibold leading-tight line-clamp-2">
+                        <h3 className="text-base min-h-9 flex items-center text-center lg:text-left font-semibold leading-tight line-clamp-2">
                           {item.degree}
                         </h3>
                         <div className="flex items-center gap-2">
@@ -195,18 +195,18 @@ const Resume = () => {
               <div className="flex flex-col gap-3 text-center xl:text-left">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-2xl lg:text-3xl font-bold">{skills.title}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed max-w-[650px] mx-auto xl:mx-0">
+                  <p className="text-white/80 text-sm leading-relaxed max-w-160 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
                 <TooltipProvider duration={100}>
                   {/* Fixed: Reduced height for maximum bounds control */}
-                  <ScrollArea className="h-[240px] pr-2 mt-1">
+                  <ScrollArea className="h-60 pr-2 mt-1">
                     <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5 p-1">
                       {skills.skillList.map((skill, index) => (
                         <li key={index}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[90px] bg-[#232329] rounded-xl flex items-center justify-center group shadow-md">
+                            <TooltipTrigger className="w-full h-24 bg-[#232329] rounded-xl flex items-center justify-center group shadow-md">
                               <div className="text-4xl group-hover:text-accent transition-all duration-300">
                                 {skill.icon}
                               </div>
@@ -224,21 +224,21 @@ const Resume = () => {
             </TabsContent>
 
             {/* About Content */}
-            <TabsContent value="about" className="max-w-4xl text-center xl:text-left w-full m-0">
-              <div className="flex flex-col gap-3">
+            <TabsContent value="about" className="max-w-4xl text-center lg:text-left w-full m-0">
+              <div className="flex flex-col gap-5">
                 <h3 className="text-2xl lg:text-3xl font-bold">{about.title}</h3>
                 <p className="text-white/80 text-sm leading-relaxed max-w-[650px] mx-auto xl:mx-0 font-normal">
                   {about.description}
                 </p>
                 
                 {/* Fixed: Extra sleek grid with reduced vertical padding */}
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 max-w-[760px] mx-auto xl:mx-0 text-left mt-1">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 max-w-3xl mx-auto xl:mx-0 text-left mt-1">
                   {about.info.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-start md:items-center justify-start gap-2 md:gap-4 flex-col sm:flex-row border-b border-white/5 pb-0.5 md:pb-0 md:border-none"
                     >
-                      <span className="text-white/60 text-xs min-w-[80px] block">
+                      <span className="text-accent text-xs min-w-20 block">
                         {item.fieldName}
                       </span>
                       <span className="text-sm md:text-base font-medium text-white break-all">

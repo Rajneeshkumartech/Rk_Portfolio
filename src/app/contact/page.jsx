@@ -79,7 +79,7 @@ const Contact = () => {
     >
       {/* Fixed: Added robust horizontal responsive padding (px-4 to xl:px-12) to prevent edge touching */}
       <div className="container mx-auto px-4 md:px-8 xl:px-12 w-full">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-[50px] items-center justify-between w-full">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between w-full">
           {/* Left Side: Form Container */}
           <div className="w-full lg:w-[55%] order-2 lg:order-0">
             {/* Fixed: Internal padding balanced to p-5 md:p-6 for internal breathing space */}
@@ -97,24 +97,28 @@ const Contact = () => {
               {/* Inputs Grid - Balanced gaps */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-0.5">
                 <Input
+                  required
                   type="text"
                   name="firstName"
                   placeholder="First Name"
                   className="h-9 bg-primary/40 border-white/10 text-xs text-white placeholder:text-white/40 focus:border-accent transition-all px-4"
                 />
                 <Input
+                  required
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
                   className="h-9 bg-primary/40 border-white/10 text-xs text-white placeholder:text-white/40 focus:border-accent transition-all px-4"
                 />
                 <Input
+                  required
                   type="email"
                   name="email"
                   placeholder="Email Address"
                   className="h-9 bg-primary/40 border-white/10 text-xs text-white placeholder:text-white/40 focus:border-accent transition-all px-4"
                 />
                 <Input
+                  required
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
@@ -161,7 +165,8 @@ const Contact = () => {
               <Textarea
                 name="message"
                 placeholder="Your Message"
-                className="min-h-20 lg:min-h-[80px] max-h-[100px] bg-primary/40 border-white/10 text-xs text-white placeholder:text-white/40 focus:border-accent resize-none transition-all px-4 py-2"
+                required
+                className="min-h-20 lg:min-h-20 max-h-24 bg-primary/40 border-white/10 text-xs text-white placeholder:text-white/40 focus:border-accent resize-none transition-all px-4 py-2"
               />
 
               {/* Status Message Label */}
@@ -185,8 +190,8 @@ const Contact = () => {
 
           {/* Right Side: Contact Info Sidebar */}
           {/* Fixed: Right side padding layout alignment secured */}
-          <div className="w-full lg:w-[40%] flex items-center lg:justify-end order-1 lg:order-none mb-4 lg:mb-0 lg:pl-6">
-            <ul className="flex flex-col gap-4 xl:gap-5 w-full max-w-[360px] lg:max-w-none">
+          <div className="w-full lg:w-[40%] flex items-center lg:justify-end order-1 lg:order-0 mb-4 lg:mb-0 lg:pl-6">
+            <ul className="flex flex-col gap-4 xl:gap-5 w-full max-w-80 lg:max-w-none">
               {info.map((item, index) => (
                 <li key={index} className="flex items-center gap-4 group">
                   <a
