@@ -39,11 +39,6 @@ const experience = {
     "I have worked on various projects, both personal and professional, that have allowed me to apply my skills in real-world scenarios using the MERN stack.",
   items: [
     {
-      position: "Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      duration: "Jan 2022 - Present",
-    },
-    {
       position: "Production Officer",
       company: "ACC LTD",
       duration: "May 2023 - Mar 2025",
