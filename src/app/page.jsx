@@ -37,6 +37,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
+                prefetch={false}
               >
                 <Button
                   variant="outline"

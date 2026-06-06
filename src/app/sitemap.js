@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = "https://rk-portfolio.vercel.app"; // Apni live URL yahan dalo
+  const baseUrl = "https://rajneeshtech.vercel.app"; // Apni live URL yahan dalo
 
   // Tumhare saare routes ki list
   const routes = ["", "/services", "/resume", "/work", "/contact"].map((route) => ({
