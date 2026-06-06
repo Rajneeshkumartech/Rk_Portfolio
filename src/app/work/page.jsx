@@ -17,8 +17,19 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
+    category: "my",
+    title: "Portfolio ",
+    description:
+      "A portfolio website built with Next.js and Framer Motion. It showcases my projects, skills, and experience in a visually appealing way, with smooth animations and transitions.",
+    stack: [{ name: "Next Js" }, { name: "Framer Motion" }, { name: "resendEmail" } ,],
+    name: "My Portfolio Website",
+    image: "/work/thumb3.png",
+    Live: "https://rajneeshtech.vercel.app/",
+    Github: "https://github.com/Rajneeshkumartech/Rk_Portfolio",
+  }, {
+    num: "02",
     category: "Full Stack",
-    title: "Project 1",
+    title: "Project",
     description:
       "A secure password manager built with React, Node.js, and MongoDB. It allows users to store and manage their passwords securely, with features like encryption and multi-factor authentication.",
     stack: [{ name: "React Js" }, { name: "Node Js" }, { name: "MongoDB" }],
@@ -28,9 +39,9 @@ const projects = [
     Github: "",
   },
   {
-    num: "02",
+    num: "03",
     category: "Frontend",
-    title: "Project 2",
+    title: "Project",
     description:
       "A finance dashboard built with React and Chart.js. It provides a visual representation of financial data, allowing users to track their investments and performance.",
     stack: [{ name: "React Js" }, { name: "Chart.js" }],
@@ -60,7 +71,7 @@ const Work = () => {
       className="min-h-[75vh] flex flex-col justify-center py-6 xl:py-0"
     >
       <div className="container mx-auto px-4 md:px-0">
-        <div className="flex flex-col lg:flex-row xl:gap-[30px] items-center">
+        <div className="flex flex-col lg:flex-row lg:gap-7 items-center">
           
           {/* Left Side: Project Details */}
           {/* Fixed: xl:h-[460px] hata diya taaki zabardasti bada box na bane */}
@@ -68,12 +79,12 @@ const Work = () => {
             {/* gap-[30px] ko thoda compact karke gap-4 kiya taaki text upar na bhage */}
             <div className="flex flex-col gap-4">
               {/* Outline Number */}
-              <div className="text-7xl lg:text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div className="text-6xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
               {/* Project Category */}
               <h2 className="text-3xl lg:text-[42px] font-bold leading-none text-white capitalize">
-                {project.category} project
+                {project.category} {project.title}
               </h2>
               {/* Project Description */}
               <p className="text-white/60 text-base lg:text-lg leading-relaxed">{project.description}</p>
@@ -95,7 +106,7 @@ const Work = () => {
                   <Link href={project.Live} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="h-[55px] w-[55px] rounded-full bg-white/5 flex items-center justify-center group border border-transparent hover:border-accent transition-all">
+                        <TooltipTrigger className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center group border border-transparent hover:border-accent transition-all">
                           <BsArrowUpRight className="text-white text-2xl group-hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent>
@@ -110,7 +121,7 @@ const Work = () => {
                   <Link href={project.Github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="h-[55px] w-[55px] rounded-full bg-white/5 flex items-center justify-center group border border-transparent hover:border-accent transition-all">
+                        <TooltipTrigger className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center group border border-transparent hover:border-accent transition-all">
                           <BsGithub className="text-white text-2xl group-hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent>
@@ -125,7 +136,6 @@ const Work = () => {
           </div>
 
           {/* Right Side: Swiper / Image Mockup */}
-          {/* Fixed: Grid structure balanced kiya taaki height windows ke bahar na jaye */}
           <div className="w-full lg:w-[50%] flex items-center mb-8 lg:mb-0">
             <Swiper
               spaceBetween={30}

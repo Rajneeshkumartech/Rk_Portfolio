@@ -63,8 +63,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Stats Section pinned properly at the bottom */}
       {/* <div className="w-full mt-4 lg:mt-0 lg:pb-4"><Stats /></div> */}
     </section>
   );

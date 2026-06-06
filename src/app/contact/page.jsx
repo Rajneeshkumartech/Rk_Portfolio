@@ -49,8 +49,7 @@ const Contact = () => {
 
     // Form ka saara data ak इकट्ठा karna
     const formData = new FormData(e.target);
-    formData.append("service", selectedService); // Select ka data alag se add kiya
-
+    formData.append("service", selectedService); 
     // Backend function ko call karna
     const result = await sendEmail(formData);
 
@@ -74,10 +73,9 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.0, duration: 0.4, ease: "easeIn" },
       }}
-      // Safe viewport boundaries
+
       className="min-h-[calc(100vh-140px)] xl:h-[calc(100vh-160px)] flex items-center py-2 xl:py-0 overflow-hidden"
     >
-      {/* Fixed: Added robust horizontal responsive padding (px-4 to xl:px-12) to prevent edge touching */}
       <div className="container mx-auto px-4 md:px-8 xl:px-12 w-full">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between w-full">
           {/* Left Side: Form Container */}
@@ -177,7 +175,6 @@ const Contact = () => {
               )}
 
               {/* Submit Button */}
-             {/* Submit Button with Loading State */}
               <Button
                 type="submit"
                 disabled={loading}
@@ -189,7 +186,6 @@ const Contact = () => {
           </div>
 
           {/* Right Side: Contact Info Sidebar */}
-          {/* Fixed: Right side padding layout alignment secured */}
           <div className="w-full lg:w-[40%] flex items-center lg:justify-end order-1 lg:order-0 mb-4 lg:mb-0 lg:pl-6">
             <ul className="flex flex-col gap-4 xl:gap-5 w-full max-w-80 lg:max-w-none">
               {info.map((item, index) => (

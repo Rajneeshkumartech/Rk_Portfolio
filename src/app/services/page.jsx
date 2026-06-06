@@ -34,7 +34,6 @@ const services = [
 const Services = () => {
   return (
     <>
-      {/* Fixed: Extra sleek vertical space control */}
       <section className="min-h-[65vh] flex flex-col justify-center py-2 xl:py-0">
         <div className="container mx-auto px-4 md:px-0">
           <motion.div
@@ -43,14 +42,12 @@ const Services = () => {
               opacity: 1,
               transition: { duration: 0.4, delay: 2.4, ease: "easeIn" },
             }}
-            // Fixed: Gap further reduced to keep cards completely screen-bound
             className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4"
           >
             {services.map((service, index) => {
               return (
                 <div
                   key={index}
-                  // Fixed: Absolute micro gaps for ultra-compact layout
                   className="flex flex-1 flex-col gap-1 group justify-center"
                 >
                   {/* Top Row: Number & Link */}
@@ -58,23 +55,20 @@ const Services = () => {
                     <div className="text-3xl lg:text-4xl font-extrabold text-transparent text-outline text-outline-hover transition-all duration-500">
                       {service.num}
                     </div>
-                    {/* Fixed: Icon container shrinked down */}
                     <Link
                       href={service.href}
-                      className="w-10 h-10 lg:w-[42px] lg:h-[42px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center hover:-rotate-45"
+                      className="w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center hover:-rotate-45"
                     >
                       <BsArrowDownRight className="text-xl text-primary" />
                     </Link>
                   </div>
 
                   {/* Title */}
-                  {/* Fixed: Downscaled to highly precise responsive typography */}
                   <h2 className="text-xl lg:text-2xl font-bold leading-snug text-white group-hover:text-accent transition-all duration-500">
                     {service.title}
                   </h2>
 
                   {/* Description */}
-                  {/* Fixed: Standardized smaller font to protect viewport limit */}
                   <p className="text-white/60 text-xs lg:text-sm leading-normal max-w-[550px]">
                     {service.desc}
                   </p>

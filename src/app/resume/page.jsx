@@ -111,9 +111,8 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      // Fixed: Height target tightened and py lowered
       className="min-h-[70vh] flex items-center justify-center py-2 xl:py-0"
-    >
+      >
       <div className="container mx-auto px-4 md:px-0">
         <Tabs
           defaultValue="about"
@@ -137,7 +136,6 @@ const Resume = () => {
                 <p className="text-white/80 text-sm leading-relaxed max-w-xl mx-auto lg:mx-0">
                   {experience.description}
                 </p>
-                {/* Fixed: Reduced height to strictly fit within standard viewports */}
                 <ScrollArea className="h-64 pr-2 mt-1">
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 p-1">
                     {experience.items.map((item, index) => (
@@ -167,7 +165,6 @@ const Resume = () => {
                 <p className="text-white/80 text-sm leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {education.description}
                 </p>
-                {/* Fixed: Reduced scroll container height */}
                 <ScrollArea className="h-64 pr-2 mt-1">
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 p-1">
                     {education.items.map((item, index) => (
@@ -200,7 +197,6 @@ const Resume = () => {
                   </p>
                 </div>
                 <TooltipProvider duration={100}>
-                  {/* Fixed: Reduced height for maximum bounds control */}
                   <ScrollArea className="h-60 pr-2 mt-1">
                     <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5 p-1">
                       {skills.skillList.map((skill, index) => (
@@ -230,8 +226,6 @@ const Resume = () => {
                 <p className="text-white/80 text-sm leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
                   {about.description}
                 </p>
-                
-                {/* Fixed: Extra sleek grid with reduced vertical padding */}
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 max-w-3xl mx-auto lg:mx-0 text-left mt-1">
                   {about.info.map((item, index) => (
                     <li
