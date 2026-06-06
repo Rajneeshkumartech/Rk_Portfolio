@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Rajneesh Kumar Portfolio",
     images: [
       {
-        url: "/public/assets/portfolio-preview.png", 
+        url: "https://rajneeshtech.vercel.app/assets/portfolio-preview.png", 
         width: 800,
         height: 600,
       },
