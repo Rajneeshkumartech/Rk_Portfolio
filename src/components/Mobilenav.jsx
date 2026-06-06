@@ -47,7 +47,7 @@ const Mobilenav = () => {
                <SheetClose key={index} asChild >
                  <Link
                   href={link.path}
-                  key={index}
+                  key={link.path}
                   className={` ${link.path === pathname && "text-accent border-b-2 border-accent "} text-xl hover:text-accent transition-all `}
                 >
                   {link.name}

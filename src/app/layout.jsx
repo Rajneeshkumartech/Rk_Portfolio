@@ -19,10 +19,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jetBrainsMono.variable} min-h-screen w-full antialiased`}>
-      {/* 1. BODY SE PADDING (px-4 lg:px-20) AUR overflow-x-hidden KO HATA DIYA */}
       <body className="bg-[#1c1c22] text-white m-0 min-h-screen w-full overflow-x-hidden">
         <TooltipProvider>
-          {/* 2. EK NYA WRAPPER DIV BANAYA JISME PADDING SHIFT KAR DI */}
           <div className="flex flex-col min-h-screen w-full lg:px-20 px-4 overflow-x-hidden">
             <Header />
             <StairTransition />

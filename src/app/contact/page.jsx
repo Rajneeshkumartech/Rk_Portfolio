@@ -196,11 +196,11 @@ const Contact = () => {
                 <li key={index} className="flex items-center gap-4 group">
                   <a
                     href={item.link}
-                    target={item.title === "Location" ? "_blank" : "_self"} // Location ko alag tab me kholne ke liye
+                    target={item.title === "Location" ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group cursor-pointer w-fit"
                   >
-                  <div className="w-10 h-10 xl:w-11 xl:h-11 bg-[#27272c] rounded-full flex items-center justify-center text-base xl:text-lg text-accent shadow-md shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                  <div className="w-10 h-10 lg:w-11 lg:h-11 bg-[#27272c] rounded-full flex items-center justify-center text-base xl:text-lg text-accent shadow-md shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                     {item.icon}
                   </div>
                   <div className="flex flex-col justify-center">

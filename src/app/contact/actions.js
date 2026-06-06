@@ -20,7 +20,8 @@ export async function sendEmail(formData) {
 
   try {
     // Resend ke zariye email bhejba
-    await resend.emails.send({
+    const data = await resend.emails.send({
+    
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "rajneeshkumar.tech@gmail.com",
       subject: `New Portfolio Message from ${firstName} ${lastName}`,
@@ -35,7 +36,7 @@ export async function sendEmail(formData) {
       `,
     });
 
-    return { success: true };
+    return { success: true , data};
   } catch (error) {
     console.error("Email send error:", error);
     return { success: false, error: "Something went wrong. Please try again." };

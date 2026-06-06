@@ -120,7 +120,7 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-6 xl:gap-10"
         >
           {/* Sidebar Tabs Buttons */}
-          <TabsList className="flex flex-col w-full max-w-[260px] mx-auto xl:mx-0 gap-3">
+          <TabsList className="flex flex-col w-full max-w-64 mx-auto xl:mx-0 gap-3">
             <TabsTrigger value="about">About</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
@@ -134,11 +134,11 @@ const Resume = () => {
             <TabsContent value="experience" className="max-w-4xl w-full m-0">
               <div className="flex flex-col gap-3 text-center xl:text-left">
                 <h3 className="text-2xl lg:text-3xl font-bold">{experience.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed max-w-[650px] mx-auto xl:mx-0">
+                <p className="text-white/80 text-sm leading-relaxed max-w-xl mx-auto lg:mx-0">
                   {experience.description}
                 </p>
                 {/* Fixed: Reduced height to strictly fit within standard viewports */}
-                <ScrollArea className="h-[270px] pr-2 mt-1">
+                <ScrollArea className="h-64 pr-2 mt-1">
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 p-1">
                     {experience.items.map((item, index) => (
                       <li
@@ -146,7 +146,7 @@ const Resume = () => {
                         className="bg-[#232329] h-32 py-3 px-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-0.5 shadow-md"
                       >
                         <span className="text-accent text-xs font-medium">{item.duration}</span>
-                        <h3 className="text-base max-w-[260px] min-h-9 flex items-center text-center lg:text-left font-semibold leading-tight">
+                        <h3 className="text-base max-w-64 min-h-9 flex items-center text-center lg:text-left font-semibold leading-tight">
                           {item.position}
                         </h3>
                         <div className="flex items-center gap-2">
@@ -162,13 +162,13 @@ const Resume = () => {
 
             {/* Education Content */}
             <TabsContent value="education" className="max-w-4xl w-full m-0">
-              <div className="flex flex-col gap-3 text-center xl:text-left">
+              <div className="flex flex-col gap-4 text-center xl:text-left">
                 <h3 className="text-2xl lg:text-3xl font-bold">{education.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed max-w-[650px] mx-auto xl:mx-0">
+                <p className="text-white/80 text-sm leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {education.description}
                 </p>
                 {/* Fixed: Reduced scroll container height */}
-                <ScrollArea className="h-[270px] pr-2 mt-1">
+                <ScrollArea className="h-64 pr-2 mt-1">
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 p-1">
                     {education.items.map((item, index) => (
                       <li
@@ -192,7 +192,7 @@ const Resume = () => {
 
             {/* Skills Content */}
             <TabsContent value="skills" className="max-w-4xl h-full w-full m-0">
-              <div className="flex flex-col gap-3 text-center xl:text-left">
+              <div className="flex flex-col gap-4 text-center xl:text-left">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-2xl lg:text-3xl font-bold">{skills.title}</h3>
                   <p className="text-white/80 text-sm leading-relaxed max-w-160 mx-auto xl:mx-0">
@@ -227,12 +227,12 @@ const Resume = () => {
             <TabsContent value="about" className="max-w-4xl text-center lg:text-left w-full m-0">
               <div className="flex flex-col gap-5">
                 <h3 className="text-2xl lg:text-3xl font-bold">{about.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed max-w-[650px] mx-auto xl:mx-0 font-normal">
+                <p className="text-white/80 text-sm leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
                   {about.description}
                 </p>
                 
                 {/* Fixed: Extra sleek grid with reduced vertical padding */}
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 max-w-3xl mx-auto xl:mx-0 text-left mt-1">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 max-w-3xl mx-auto lg:mx-0 text-left mt-1">
                   {about.info.map((item, index) => (
                     <li
                       key={index}
