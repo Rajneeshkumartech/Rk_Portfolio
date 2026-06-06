@@ -13,8 +13,26 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata = {
   title: "Rajneesh Kumar | Full Stack Developer Portfolio",
-  description: "Welcome to my portfolio. I build optimized full-stack web applications using the MERN & Next.js stack.",
+  description: "Official portfolio of Rajneesh Kumar, a passionate Full Stack Web Developer specializing in MERN stack, Next.js, and optimized web applications.",
+  keywords: ["Rajneesh Kumar", "Rajneesh Kumar Tech", "Full Stack Developer", "Next.js Portfolio", "MERN Stack Developer India , Web Developer Portfolio", "React Developer", "Node.js Developer", "JavaScript Developer", "Web Development Services", "Contact Rajneesh Kumar" , "web developer"],
+  authors: [{ name: "Rajneesh Kumar" }],
+  openGraph: {
+    title: "Rajneesh Kumar | Full Stack Developer Portfolio",
+    description: "Explore my latest web development projects, skills, and experience.",
+    url: "https://rk-portfolio.vercel.app", // Yahan apni live Vercel link daal dena baad me
+    siteName: "Rajneesh Kumar Portfolio",
+    images: [
+      {
+        url: "/icon.jsx", 
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
